@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyPage(),
+      debugShowCheckedModeBanner: false,
+      home: HomePage(title: 'freezed',),
     );
   }
 }
