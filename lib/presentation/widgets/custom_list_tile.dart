@@ -30,6 +30,7 @@ class CustomListTile extends StatelessWidget {
               padding: EdgeInsets.only(left: 20, bottom: 2),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
                     width: MediaQuery.of(context).size.width / 1.9,
@@ -39,6 +40,7 @@ class CustomListTile extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ),
+                  SizedBox(height: 3.0),
                   CharacterStatus(
                     liveState: results.status == 'Alive'
                         ? LiveState.alive
