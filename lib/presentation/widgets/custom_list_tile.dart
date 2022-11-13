@@ -12,7 +12,7 @@ class CustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(15),
+      borderRadius: BorderRadius.circular(10),
       child: Container(
         height: MediaQuery.of(context).size.height / 7,
         color: Color.fromRGBO(86, 86, 86, 0.8),
@@ -27,7 +27,7 @@ class CustomListTile extends StatelessWidget {
               errorWidget: (context, ur, error) => Icon(Icons.error),
             ),
             Padding(
-              padding: EdgeInsets.only(left: 20, bottom: 5),
+              padding: EdgeInsets.only(left: 20, bottom: 2),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -39,9 +39,6 @@ class CustomListTile extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyText2,
                     ),
                   ),
-                  SizedBox(
-                    height: 10.0,
-                  ),
                   CharacterStatus(
                     liveState: results.status == 'Alive'
                         ? LiveState.alive
@@ -49,46 +46,30 @@ class CustomListTile extends StatelessWidget {
                             ? LiveState.dead
                             : LiveState.unknown,
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: 5),
                   SizedBox(
                     width: MediaQuery.of(context).size.width / 2,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Species:',
-                            style: Theme.of(context).textTheme.caption,
-                          ),
-                          SizedBox(height: 2.0),
-                          Text(
-                            results.species,
-                            overflow: TextOverflow.ellipsis,
-                            style: Theme.of(context).textTheme.bodyText1,
-                          ),
-                        ],
+                      Text(
+                        'Species: ${results.species}',
+                        style: Theme.of(context).textTheme.caption,
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Gender:',
-                            style: Theme.of(context).textTheme.caption,
-                          ),
-                          SizedBox(height: 2.0),
-                          Text(
-                            results.gender,
-                            overflow: TextOverflow.ellipsis,
-                            style: Theme.of(context).textTheme.bodyText1,
-                          ),
-                        ],
+                      SizedBox(height: 2.0),
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Gender: ${results.gender}',
+                        style: Theme.of(context).textTheme.caption,
                       ),
+                      SizedBox(height: 2.0),
                     ],
                   ),
                 ],

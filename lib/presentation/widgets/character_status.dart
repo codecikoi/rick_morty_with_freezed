@@ -10,11 +10,10 @@ class CharacterStatus extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Icon(
           Icons.circle,
-          size: 11,
+          size: 9.0,
           color: liveState == LiveState.alive
               ? Colors.lightGreenAccent[200]
               : liveState == LiveState.dead

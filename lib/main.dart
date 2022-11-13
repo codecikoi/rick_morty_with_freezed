@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white70,
           ),
           bodyText1: TextStyle(
-            fontSize: 12.0,
+            fontSize: 11.0,
             fontWeight: FontWeight.w200,
             color: Colors.white70,
           ),
