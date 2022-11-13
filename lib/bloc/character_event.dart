@@ -5,5 +5,5 @@ class CharacterEvent with _$CharacterEvent {
   factory CharacterEvent.fetch({
     required String name,
     required int page,
-  }) = CharacterEvenFetch;
+  }) = CharacterEventFetch;
 }

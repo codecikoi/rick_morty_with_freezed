@@ -36,17 +36,17 @@ mixin _$CharacterEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CharacterEvenFetch value) fetch,
+    required TResult Function(CharacterEventFetch value) fetch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CharacterEvenFetch value)? fetch,
+    TResult? Function(CharacterEventFetch value)? fetch,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CharacterEvenFetch value)? fetch,
+    TResult Function(CharacterEventFetch value)? fetch,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -95,22 +95,22 @@ class _$CharacterEventCopyWithImpl<$Res, $Val extends CharacterEvent>
 }
 
 /// @nodoc
-abstract class _$$CharacterEvenFetchCopyWith<$Res>
+abstract class _$$CharacterEventFetchCopyWith<$Res>
     implements $CharacterEventCopyWith<$Res> {
-  factory _$$CharacterEvenFetchCopyWith(_$CharacterEvenFetch value,
-          $Res Function(_$CharacterEvenFetch) then) =
-      __$$CharacterEvenFetchCopyWithImpl<$Res>;
+  factory _$$CharacterEventFetchCopyWith(_$CharacterEventFetch value,
+          $Res Function(_$CharacterEventFetch) then) =
+      __$$CharacterEventFetchCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, int page});
 }
 
 /// @nodoc
-class __$$CharacterEvenFetchCopyWithImpl<$Res>
-    extends _$CharacterEventCopyWithImpl<$Res, _$CharacterEvenFetch>
-    implements _$$CharacterEvenFetchCopyWith<$Res> {
-  __$$CharacterEvenFetchCopyWithImpl(
-      _$CharacterEvenFetch _value, $Res Function(_$CharacterEvenFetch) _then)
+class __$$CharacterEventFetchCopyWithImpl<$Res>
+    extends _$CharacterEventCopyWithImpl<$Res, _$CharacterEventFetch>
+    implements _$$CharacterEventFetchCopyWith<$Res> {
+  __$$CharacterEventFetchCopyWithImpl(
+      _$CharacterEventFetch _value, $Res Function(_$CharacterEventFetch) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -119,7 +119,7 @@ class __$$CharacterEvenFetchCopyWithImpl<$Res>
     Object? name = null,
     Object? page = null,
   }) {
-    return _then(_$CharacterEvenFetch(
+    return _then(_$CharacterEventFetch(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -134,8 +134,8 @@ class __$$CharacterEvenFetchCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$CharacterEvenFetch implements CharacterEvenFetch {
-  _$CharacterEvenFetch({required this.name, required this.page});
+class _$CharacterEventFetch implements CharacterEventFetch {
+  _$CharacterEventFetch({required this.name, required this.page});
 
   @override
   final String name;
@@ -151,7 +151,7 @@ class _$CharacterEvenFetch implements CharacterEvenFetch {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CharacterEvenFetch &&
+            other is _$CharacterEventFetch &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.page, page) || other.page == page));
   }
@@ -162,8 +162,8 @@ class _$CharacterEvenFetch implements CharacterEvenFetch {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CharacterEvenFetchCopyWith<_$CharacterEvenFetch> get copyWith =>
-      __$$CharacterEvenFetchCopyWithImpl<_$CharacterEvenFetch>(
+  _$$CharacterEventFetchCopyWith<_$CharacterEventFetch> get copyWith =>
+      __$$CharacterEventFetchCopyWithImpl<_$CharacterEventFetch>(
           this, _$identity);
 
   @override
@@ -197,7 +197,7 @@ class _$CharacterEvenFetch implements CharacterEvenFetch {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(CharacterEvenFetch value) fetch,
+    required TResult Function(CharacterEventFetch value) fetch,
   }) {
     return fetch(this);
   }
@@ -205,7 +205,7 @@ class _$CharacterEvenFetch implements CharacterEvenFetch {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(CharacterEvenFetch value)? fetch,
+    TResult? Function(CharacterEventFetch value)? fetch,
   }) {
     return fetch?.call(this);
   }
@@ -213,7 +213,7 @@ class _$CharacterEvenFetch implements CharacterEvenFetch {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(CharacterEvenFetch value)? fetch,
+    TResult Function(CharacterEventFetch value)? fetch,
     required TResult orElse(),
   }) {
     if (fetch != null) {
@@ -223,10 +223,10 @@ class _$CharacterEvenFetch implements CharacterEvenFetch {
   }
 }
 
-abstract class CharacterEvenFetch implements CharacterEvent {
-  factory CharacterEvenFetch(
+abstract class CharacterEventFetch implements CharacterEvent {
+  factory CharacterEventFetch(
       {required final String name,
-      required final int page}) = _$CharacterEvenFetch;
+      required final int page}) = _$CharacterEventFetch;
 
   @override
   String get name;
@@ -234,7 +234,7 @@ abstract class CharacterEvenFetch implements CharacterEvent {
   int get page;
   @override
   @JsonKey(ignore: true)
-  _$$CharacterEvenFetchCopyWith<_$CharacterEvenFetch> get copyWith =>
+  _$$CharacterEventFetchCopyWith<_$CharacterEventFetch> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
